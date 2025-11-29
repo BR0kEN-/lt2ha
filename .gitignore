@@ -1,0 +1,13 @@
+/*
+.*
+*.pyc
+
+!.git*
+
+!/pyproject.toml
+!/README.md
+
+!/docs/
+
+!/src/
+!/src/**/*.py

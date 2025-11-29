@@ -1,0 +1,16 @@
+[build-system]
+requires = [
+    "setuptools",
+]
+
+[project]
+name = "lt2ha"
+version = "1.0.0"
+requires-python = ">= 3.13"
+dependencies = [
+    "paho-mqtt==2.1.0",
+    "websockets==15.0.1"
+]
+
+[project.scripts]
+lt2ha-bridge = "lt2ha.bridge:main"
