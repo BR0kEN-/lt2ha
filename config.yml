@@ -1,0 +1,46 @@
+---
+url: https://github.com/BR0kEN-/lt2ha
+name: "Larnitech to Home Assistant Bridge"
+slug: "lt2ha"
+version: "1.0.0"
+description: "Bridge between Larnitech and Home Assistant using WebSockets and MQTT"
+init: false
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+options:
+  ha_mqtt_discovery_prefix: "homeassistant"
+  mqtt_host: "core-mosquitto"
+  mqtt_port: 1883
+  mqtt_username: "mosquitto"
+  mqtt_password: ""
+  mqtt_proto: "4"
+  mqtt_transport: "tcp"
+  lt_host: ""
+  lt_port: 2041
+  lt_key: ""
+  lt_ignore_addr: []
+  lt_ignore_type:
+    - com-port
+  lt_ignore_area:
+    - Setup
+schema:
+  ha_mqtt_discovery_prefix: "str"
+  mqtt_host: "str"
+  mqtt_port: "port"
+  mqtt_username: "str"
+  mqtt_password: "password"
+  mqtt_proto: "list(3|4|5)"
+  mqtt_transport: "list(tcp|websockets|unix)"
+  lt_host: "str"
+  lt_port: "port"
+  lt_key: "password"
+  lt_ignore_addr:
+    - str?
+  lt_ignore_type:
+    - str?
+  lt_ignore_area:
+    - str?

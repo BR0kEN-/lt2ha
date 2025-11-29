@@ -4,10 +4,16 @@
 
 !.git*
 
+!/config.yml
+!/Dockerfile
 !/pyproject.toml
 !/README.md
+!/repository.yaml
+!/run.sh
 
 !/docs/
 
 !/src/
 !/src/**/*.py
+
+!/translations/*.yaml

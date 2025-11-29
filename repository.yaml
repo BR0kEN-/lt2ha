@@ -1,0 +1,5 @@
+---
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+url: https://github.com/BR0kEN-/lt2ha
+name: "Larnitech to Home Assistant Bridge Add-on Repository"
+maintainer: Sergii Bondarenko <sb@firstvector.org>

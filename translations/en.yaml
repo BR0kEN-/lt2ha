@@ -1,0 +1,43 @@
+configuration:
+  mqtt_client_id:
+    name: MQTT Client ID
+    description: The unique client identifier for the MQTT connection.
+  ha_mqtt_discovery_prefix:
+    name: Home Assistant MQTT Discovery Prefix
+    description: The MQTT discovery prefix used by Home Assistant (typically "homeassistant").
+  mqtt_host:
+    name: MQTT Host
+    description: The hostname or IP address of the MQTT broker (e.g., "core-mosquitto" for Home Assistant addon).
+  mqtt_port:
+    name: MQTT Port
+    description: The port number of the MQTT broker (typically 1883 for unencrypted, 8883 for encrypted).
+  mqtt_username:
+    name: MQTT Username
+    description: The username for authenticating with the MQTT broker.
+  mqtt_password:
+    name: MQTT Password
+    description: The password for authenticating with the MQTT broker.
+  mqtt_proto:
+    name: MQTT Protocol Version
+    description: The MQTT protocol version to use (3 for MQTT v3.1, 4 for MQTT v3.1.1, 5 for MQTT v5).
+  mqtt_transport:
+    name: MQTT Transport
+    description: The transport method for MQTT connection (tcp, websockets, or unix).
+  lt_host:
+    name: Larnitech Host
+    description: The hostname or IP address of the Larnitech hub.
+  lt_port:
+    name: Larnitech Port
+    description: The port number for the Larnitech WebSocket API (typically 2041).
+  lt_key:
+    name: Larnitech API Key
+    description: The API key for authenticating with the Larnitech hub.
+  lt_ignore_addr:
+    name: Ignore Device Addresses
+    description: List of device addresses to ignore (e.g., ["312:93"]).
+  lt_ignore_type:
+    name: Ignore Device Types
+    description: List of device types to ignore (e.g., ["com-port", "script"]).
+  lt_ignore_area:
+    name: Ignore Areas
+    description: List of area names to ignore (e.g., ["Setup"]).
