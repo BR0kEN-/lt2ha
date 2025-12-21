@@ -62,6 +62,10 @@ This is an alternative usage method. Stick to it only if you know why you're goi
 ![Devices](docs/images/3-devices.jpg)
 ![Devices](docs/images/4-devices.jpg)
 
+## Notes
+
+- Renaming/removing an entity in Larnitech would not be reflected in HA. Though, once done, restart the bridge and reload an MQTT. Then adjust the HA entity manually.
+
 ## Disclaimer
 
 This software is provided as is without any express or implied warranties. The author is not responsible for any damage or data loss. Use at your own risk.

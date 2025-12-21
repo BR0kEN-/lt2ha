@@ -67,7 +67,7 @@ class LarnitechMqttBridge:
             },
         })
 
-        # Tell HA know about the new device.
+        # Tell HA about the new device.
         self._mqtt.client.publish(
             f"{self._mqtt.discovery.prefix}/{device.entity_type}/{unique_id}/config",
             device.config,
