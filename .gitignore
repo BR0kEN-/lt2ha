@@ -2,10 +2,14 @@
 .*
 *.pyc
 
+*.egg-info/
+
+!.editorconfig
 !.git*
 
 !/config.yml
 !/Dockerfile
+!/Makefile
 !/pyproject.toml
 !/README.md
 !/repository.yaml
@@ -15,5 +19,8 @@
 
 !/src/
 !/src/**/*.py
+
+!/tests/
+!/tests/**/*.py
 
 !/translations/*.yaml
