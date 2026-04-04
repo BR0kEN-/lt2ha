@@ -14,3 +14,9 @@ dependencies = [
 
 [project.scripts]
 lt2ha-bridge = "lt2ha.bridge:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
