@@ -5,7 +5,7 @@ requires = [
 
 [project]
 name = "lt2ha"
-version = "1.0.0"
+version = "1.2.0"
 requires-python = ">= 3.12"
 dependencies = [
     "paho-mqtt==2.1.0",
