@@ -2,7 +2,7 @@
 url: https://github.com/BR0kEN-/lt2ha
 name: "Larnitech to Home Assistant Bridge"
 slug: "lt2ha"
-version: "1.1.0"
+version: "1.2.0"
 description: "Bridge between Larnitech and Home Assistant using WebSockets and MQTT"
 init: false
 arch:
