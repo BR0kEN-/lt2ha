@@ -1,11 +1,12 @@
 import asyncio
 import logging
-from json import dumps as json_dumps, loads as json_loads
+from json import dumps as json_dumps, loads as json_loads, JSONDecodeError
 from sys import stdout
 from time import sleep
 from typing import Any, Callable
 from queue import Queue as ThreadSafeQueue
 
+from json_repair import repair_json
 from paho.mqtt.client import MQTTMessage, MQTTProtocolVersion
 from websockets import (
     ClientConnection as WsClientConnection,
@@ -316,13 +317,17 @@ class LarnitechMqttBridge:
 
     async def _ws_receive(self) -> dict:
         frame = await self._ws.recv(decode=False)
-
-        return json_loads(
+        message = (
             frame.decode("utf-8", errors="ignore")
             if isinstance(frame, bytes)
-            else frame,
-            strict=False,
+            else frame
         )
+
+        try:
+            return json_loads(message, strict=False)
+        except JSONDecodeError:
+            _LOGGER.error(f"LT: Malformed JSON: {message}")
+            return repair_json(message, skip_json_loads=True, return_objects=True)
 
     async def _ws_send(
         self,
